@@ -1,0 +1,47 @@
+features:	[UID, device_code1_nunique_x, device1_nunique_UID_mean_x, device_code2_nunique_UID_mean_x, ip1_nunique_UID_min_x, ip1_nunique_UID_mean_x, wifi_nunique_UID_mean, geo_code_count_UID_max_x, trans_amt_nunique, merchant_nunique, trans_type2_nunique, channel_nunique_UID_max, channel_nunique_UID_mean, day_nunique_UID_max_y, amt_src1_nunique_UID_min, amt_src1_nunique_UID_mean, merchant_nunique_UID_max, merchant_nunique_UID_mean, code1_nunique_UID_max, code1_nunique_UID_mean, device_code2_nunique_UID_max_y, market_code_nunique_UID_mean, channel_count_UID_max, channel_count_UID_mean, trans_amt_count_UID_min, amt_src1_count_UID_min, merchant_count_UID_max, merchant_count_UID_min, merchant_count_UID_mean, trans_type1_count_UID_mean, geo_code_count_UID_max_y, trans_type2_count_UID_mean, channel_has_118]
+
+model:	LogisticRegression(C=10, class_weight='balanced', dual=False,
+          fit_intercept=True, intercept_scaling=1, max_iter=1000,
+          multi_class='warn', n_jobs=None, penalty='l2', random_state=None,
+          solver='newton-cg', tol=0.0001, verbose=0, warm_start=False)
+
+roc_auc_score:	0.9180671472115011
+
+tpr_weight_score:	0.03988258180408325
+####################################################################################################
+features:	[UID, device_code1_nunique_x, device1_nunique_UID_mean_x, device_code2_nunique_UID_mean_x, ip1_nunique_UID_min_x, ip1_nunique_UID_mean_x, wifi_nunique_UID_mean, geo_code_count_UID_max_x, trans_amt_nunique, merchant_nunique, trans_type2_nunique, channel_nunique_UID_max, channel_nunique_UID_mean, day_nunique_UID_max_y, amt_src1_nunique_UID_min, amt_src1_nunique_UID_mean, merchant_nunique_UID_max, merchant_nunique_UID_mean, code1_nunique_UID_max, code1_nunique_UID_mean, device_code2_nunique_UID_max_y, market_code_nunique_UID_mean, channel_count_UID_max, channel_count_UID_mean, trans_amt_count_UID_min, amt_src1_count_UID_min, merchant_count_UID_max, merchant_count_UID_min, merchant_count_UID_mean, trans_type1_count_UID_mean, geo_code_count_UID_max_y, trans_type2_count_UID_mean, channel_has_118]
+
+model:	GradientBoostingClassifier(criterion='friedman_mse', init=None,
+              learning_rate=0.3, loss='deviance', max_depth=3,
+              max_features=None, max_leaf_nodes=None,
+              min_impurity_decrease=0.0, min_impurity_split=None,
+              min_samples_leaf=7, min_samples_split=4,
+              min_weight_fraction_leaf=0.0, n_estimators=1000,
+              n_iter_no_change=None, presort='auto', random_state=None,
+              subsample=1.0, tol=0.0001, validation_fraction=0.1,
+              verbose=0, warm_start=False)
+
+roc_auc_score:	0.9336998273194715
+
+tpr_weight_score:	0.3973988194795773
+####################################################################################################
+features:	[UID, device_code1_nunique_x, device1_nunique_UID_mean_x, device_code2_nunique_UID_mean_x, ip1_nunique_UID_min_x, ip1_nunique_UID_mean_x, wifi_nunique_UID_mean, geo_code_count_UID_max_x, trans_amt_nunique, merchant_nunique, trans_type2_nunique, channel_nunique_UID_max, channel_nunique_UID_mean, day_nunique_UID_max_y, amt_src1_nunique_UID_min, amt_src1_nunique_UID_mean, merchant_nunique_UID_max, merchant_nunique_UID_mean, code1_nunique_UID_max, code1_nunique_UID_mean, device_code2_nunique_UID_max_y, market_code_nunique_UID_mean, channel_count_UID_max, channel_count_UID_mean, trans_amt_count_UID_min, amt_src1_count_UID_min, merchant_count_UID_max, merchant_count_UID_min, merchant_count_UID_mean, trans_type1_count_UID_mean, geo_code_count_UID_max_y, trans_type2_count_UID_mean, channel_has_118]
+
+model:	XGBClassifier(base_score=0.5, booster='gbtree', colsample_bylevel=1,
+       colsample_bytree=0.8, gamma=0.1, learning_rate=0.3,
+       max_delta_step=0, max_depth=5, min_child_weight=1, missing=None,
+       n_estimators=300, n_jobs=1, nthread=None,
+       objective='binary:logistic', random_state=0, reg_alpha=1e-05,
+       reg_lambda=1, scale_pos_weight=1, seed=None, silent=True,
+       subsample=0.8)
+
+roc_auc_score:	0.9422874998492685
+
+tpr_weight_score:	0.4219877593726245
+####################################################################################################
+ensembling
+
+roc_auc_score:	0.9593324957112704
+
+tpr_weight_score:	0.7718679692064544
+####################################################################################################
